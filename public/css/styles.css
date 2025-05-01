@@ -1,0 +1,474 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Tokumin:wght@400;500;700&family=Poppins:wght@300;400;500&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --sm-font: 'Poppins', sans-serif;
+    --red: red;
+}
+
+body {
+    font-family: var(--sm-font);
+}
+
+
+/* NAVBAR */
+#logo {
+    background: url('/images/otros/logoriver.png') no-repeat center center;
+    background-size: contain;
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 0;
+}
+
+.navbar {
+    -webkit-box-shadow: 0 3px 9px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 9px 3px rgba(0, 0, 0, 0.1);
+    font-display: 'Poppins';
+    position: relative;
+    z-index: 1000;
+}
+
+.nav-link {
+    transition: 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--red) !important;
+}
+
+
+/* Carrito */
+.display{
+    display: flex;
+    border: 2px solid lightgrey;
+    border-radius: 10px;
+    padding: 3%;
+ 
+}
+.titulo-carrito{
+    font-size: 1rem;
+    padding: 5%;
+}
+
+.subtitulo-carrito{
+    font-size: 1rem;
+    padding-left:5%;
+    
+}
+
+.img-thumbnail{
+    width: 40%;
+}
+
+.custom-padding {
+    padding: 10px;
+    margin-bottom:10px;
+    margin-left:5%;
+    width: 90%;
+    
+  }
+
+
+/* INTRODUCCIÓN BARRITA ROJA*/
+.title h2::before {
+    position: absolute;
+    content: "";
+    width: 4px;
+    height: 50px;
+    background-color: var(--red);
+    left: -20px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+
+
+#mision-vision-valores p {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.contenedor-img {
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+#imagen-alumno{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;   
+}
+
+.agregar-al-carrito{
+    border: 2px solid red;
+    color:black; padding: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.agregar-al-carrito:hover{
+    border: 2px solid red;
+    background-color: grey;
+    color:white;
+}
+.comprar-ahora{
+    border: 2px solid red;
+    color:black; padding: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.comprar-ahora:hover{
+    background-color: grey;
+    color:white;
+}
+
+
+/* PRODUCTOS */
+.text-primary {
+    color: var( --red) !important;
+}
+
+#productos {
+    background-color: lightgrey;
+    padding: 50px;
+}
+
+#productos button {
+    background-color: white;
+}
+
+#productos:hover button {
+    color:black;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+}
+
+.card img {
+    transition: opacity 0.3s ease;
+    width: 100%;           /* Hace que las imágenes ocupen todo el ancho del contenedor */
+    height: 350px;         /* Establece una altura fija para todas las imágenes */
+    object-fit: contain;   /* Ajusta la imagen sin recortarla, manteniendo su aspecto */
+    object-position: center;  /* Asegura que el centro de la imagen se mantenga visible */
+}
+
+.card .img-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 350px;
+    object-fit: contain;
+    object-position: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card:hover .img-hover {
+    opacity: 1;
+}
+
+.card:hover .img-original {
+    opacity: 0;
+}
+
+.card-price {
+    color: #1ca10d !important;
+}
+
+.img-original,
+.img-hover {
+    transition: opacity 0.2s ease-in-out;
+}
+
+.img-original {
+    opacity: 1;
+}
+
+.img-hover {
+    opacity: 0;
+    pointer-events: none; 
+}
+
+.position-relative:hover .img-hover {
+    opacity: 1;
+}
+
+.position-relative:hover .img-original {
+    opacity: 0;
+}
+
+.btn {
+    background-color: white;
+    color:black;
+}
+
+.btn-detalles {
+    border: 2px solid red; 
+}
+
+.btn-detalles:hover {
+    background-color: red;
+    border: 2px solid red;
+    color: white; 
+}
+
+.sub-titulo{
+    margin-top:12%;
+}
+
+.btn-outline-warning {
+    border: 2px solid #ffc107;
+}
+
+.btn-outline-warning:hover {
+    background-color: #ffe596;
+}
+
+.id{
+    color:red;
+}
+
+.id2{
+    color:gold;
+
+}
+#titulo-descuento{
+text-align: center;
+margin-left:30px;
+}
+
+#productos-home {
+    padding: 100px; 
+}
+
+/* UNITE A RIVER ID */
+.img-container img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+
+.img-container img:hover {
+    transform: scale(1.05);
+}
+
+.embed-responsive iframe {
+    width: 100%;
+    border: 0;
+}
+
+.description ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    text-align: left;
+}
+
+.additional-info h3 {
+    margin-top: 40px;
+    font-size: 20px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+}
+
+/* SECCIÓN LIBRE */
+.bg-light-blue {
+    background-color: lightgrey;
+    padding: 80px;
+}
+
+.lead.text-info {
+    color: #e5345b !important; 
+    font-weight: 500;
+}
+
+
+
+/* ACCORDEON */
+
+.accordion-button {
+     color: black; 
+     border-radius: 5px;
+   }
+ 
+   .accordion-button:hover {
+     background-color: lightgrey; 
+     color: black; 
+     
+   }
+ 
+   .accordion-button::after {
+     content: '';
+     display: inline-block;
+     width: 0;
+     height: 0;
+     margin-left: auto;
+     vertical-align: middle;
+     border-left: .40em solid transparent;
+     border-right: .40em solid transparent;
+     border-top: .40em solid red; 
+     transition: transform .3s ease;
+   }
+ 
+   .accordion-button:not(.collapsed)::after {
+     transform: rotate(180deg);
+   }
+ 
+   .accordion-item {
+     border-radius: 5px; 
+     margin-bottom: 1rem; 
+   }
+ 
+     .accordion-button:focus {
+      box-shadow: none !important;
+      outline: none !important; 
+       }
+ 
+
+/* CONTACTO */
+
+
+form {
+    width: 100%;
+    max-width: 60rem;
+}
+
+.form-control {
+    border-radius: 12;
+}
+
+.form-control:focus {
+    border-color: red;
+    box-shadow: none;
+}
+
+input {
+    height: 3.5rem;
+}
+
+.textarea {
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.btnform {
+    background-color: white;
+    color: red;
+    font-weight: bold;
+    border: 2px solid red;
+    border-radius:13px;
+}
+
+.btnform:hover {
+    background-color: grey;
+    color: white;
+}
+
+#titulo-alumno{
+    padding: 30px;
+    margin-top:10px;
+}
+
+.subtitulo-alumno{
+    color:red;
+}
+
+
+/* FOOTER */
+footer {
+    background-color: grey;
+}
+
+label {
+    margin-right: 5px;
+}
+
+select,
+input {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+
+.description {
+    margin-top: 20px;
+}
+
+d-inline-block comprar-ahora{
+    background-color: red;
+    color: white;
+    border: 2px solid red;
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.footer-menu {
+    list-style-type: none; 
+    padding: 10px;
+    margin: 0;
+    display: flex; 
+    justify-content: center; 
+}
+
+
+.footer-menu li {
+    margin-right: 15px; 
+}
+
+.footer-menu li:last-child {
+    margin-right: 0; 
+}
+
+.footer-menu a {
+    text-decoration: none; 
+    font-size: 15px; 
+    color: white;
+    transition: 0.3s ease;
+}
+
+.footer-menu a:hover {
+    color:red; 
+}
+
+.equal-width-table th {
+    width: 12.5%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.alumno{
+    min-height: calc(100vh - 250px);
+}
+
+
+/* MEDIAQUERYS BOOSTRAP */
+
+@media screen and (min-width: 769px) and (max-width: 1680px) {}
+
+@media screen and (min-width: 601px) and (max-width: 768px) {}
+
+@media screen and (max-width: 600px) {}
