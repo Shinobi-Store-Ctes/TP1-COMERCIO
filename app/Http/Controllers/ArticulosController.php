@@ -38,7 +38,7 @@ class ArticulosController extends Controller
         // Manejo de imágenes
         if ($request->hasFile('imagen')) {
             $filename = time() . '_img.' . $request->imagen->extension();
-            $request->imagen->move(public_path('images/productos-actualizados'), $filename);
+            $request->imagen->move(public_path('images/productos'), $filename);
             $articulo->imagen = $filename;
         } else {
             $articulo->imagen = $input['imagen'] ?? null;
@@ -46,7 +46,7 @@ class ArticulosController extends Controller
         
         if ($request->hasFile('imagen_hover')) {
             $filenameHover = time() . '_hover.' . $request->imagen_hover->extension();
-            $request->imagen_hover->move(public_path('images/productos-actualizados'), $filenameHover);
+            $request->imagen_hover->move(public_path('images/productos/'), $filenameHover);
             $articulo->imagen_hover = $filenameHover;
         } else {
             $articulo->imagen_hover = $input['imagen_hover'] ?? null;
@@ -92,13 +92,13 @@ class ArticulosController extends Controller
 
         if ($request->hasFile('imagen')) {
             $filename = time() . '_img.' . $request->imagen->extension();
-            $request->imagen->move(public_path('images/productos-actualizados'), $filename);
+            $request->imagen->move(public_path('images/productos/'), $filename);
             $articulo->imagen = $filename;
         }
 
         if ($request->hasFile('imagen_hover')) {
             $filenameHover = time() . '_hover.' . $request->imagen_hover->extension();
-            $request->imagen_hover->move(public_path('images/productos-actualizados'), $filenameHover);
+            $request->imagen_hover->move(public_path('images/productos/'), $filenameHover);
             $articulo->imagen_hover = $filenameHover;
         }
 

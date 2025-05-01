@@ -294,7 +294,7 @@
             @forelse($noticias as $noticia)
                 <div class="col">
                     <div class="card h-100">
-                        @if ($noticia->foto)
+                        @if ($noticia->imagen)
                             <img src="{{ asset('images/' . $noticia->imagen) }}" class="card-img-top" alt="{{ $noticia->titulo }}">
                         @endif
                         <div class="card-body">

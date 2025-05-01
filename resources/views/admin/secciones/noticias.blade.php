@@ -26,7 +26,7 @@
                         <td>{{ $noticia->titulo }}</td>
                         <td>{{ Str::limit($noticia->contenido, 100) }}</td>
                         <td>
-                            @if ($noticia->foto)
+                            @if ($noticia->imagen)
                                 <img src="{{ asset('images/' . $noticia->imagen) }}" alt="Imagen" width="100">
                             @else
                                 Sin imagen

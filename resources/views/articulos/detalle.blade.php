@@ -16,13 +16,13 @@
         <div class="col-lg-5 col-md-12 text-center">
             <div class="position-relative rounded shadow overflow-hidden">
                 <img 
-                    src="{{ asset('images/' . $articulo->imagen) }}" 
+                    src="{{ asset('images/productos/' . $articulo->imagen) }}" 
                     alt="Imagen principal de {{ $articulo->nombre }}" 
                     class="img-fluid rounded img-original"
                     style="height: 100%; width: auto; max-width: 100%; object-fit: contain;"
                 >
                 <img 
-                    src="{{ asset('images/' . $articulo->imagen_hover) }}" 
+                    src="{{ asset('images/productos/' . $articulo->imagen_hover) }}" 
                     alt="Imagen secundaria de {{ $articulo->nombre }}" 
                     class="img-fluid rounded img-hover position-absolute top-0 start-50 translate-middle-x"
                     style="height: 100%; width: auto; max-width: 100%; object-fit: contain;"

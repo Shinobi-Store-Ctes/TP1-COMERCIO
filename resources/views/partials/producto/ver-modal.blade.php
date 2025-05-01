@@ -10,12 +10,12 @@
                 <div class="row">
                     <div class="col-md-5 text-center">
                         @if ($articulo->imagen)
-                            <img src="{{ asset('images/' . $articulo->imagen) }}" class="img-fluid mb-3" alt="{{ $articulo->nombre }}">
+                            <img src="{{ asset('images/productos/' . $articulo->imagen) }}" class="img-fluid mb-3" alt="{{ $articulo->nombre }}">
                         @else
                             <p>Sin imagen</p>
                         @endif
                         @if ($articulo->imagen_hover)
-                            <img src="{{ asset('images/' . $articulo->imagen_hover) }}" class="img-fluid" alt="{{ $articulo->nombre }} (hover)">
+                            <img src="{{ asset('images/productos/' . $articulo->imagen_hover) }}" class="img-fluid" alt="{{ $articulo->nombre }} (hover)">
                         @endif
                     </div>
                     <div class="col-md-7">

@@ -26,7 +26,7 @@
                     <td>{{ $articulo->articulo_id }}</td>
                     <td>
                         @if (!empty($articulo->imagen))
-                            <img src="{{ asset('images/' . $articulo->imagen) }}" alt="Imagen de {{ $articulo->nombre }}" class="img-thumbnail mx-auto d-block" style="width: 100px; height: auto;">
+                            <img src="{{ asset('images/productos/' . $articulo->imagen) }}" alt="Imagen de {{ $articulo->nombre }}" class="img-thumbnail mx-auto d-block" style="width: 100px; height: auto;">
                         @else
                             <span>Sin imagen</span>
                         @endif
