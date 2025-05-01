@@ -93,4 +93,3 @@ Route::middleware(['auth'])->group(function () {
     });
 });
 
-Route::get('/', [NoticiaController::class, 'publicas'])->name('inicio');

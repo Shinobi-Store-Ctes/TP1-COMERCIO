@@ -11,6 +11,7 @@
         <a href="{{ route('admin.section', ['seccion' => 'categorias']) }}" class="btn btn-info">Categorías</a>
         <a href="{{ route('admin.section', ['seccion' => 'usuarios']) }}" class="btn btn-warning">Usuarios</a>
         <a href="{{ route('admin.section', ['seccion' => 'mensajes']) }}" class="btn btn-danger">Mensajes</a>
+        <a href="{{ route('noticias.index') }}" class="btn btn-dark">Noticias</a>
     </div>
 
     @yield('admin-section')
