@@ -36,6 +36,12 @@ class AdminController extends Controller
         $usuarios = User::all();
         $mensajes = Mensaje::orderBy('fecha_envio', 'desc')->get();
 
+        if ($seccion === 'noticias') {
+            $noticias = \App\Models\Noticia::latest()->get();
+            return view("admin.secciones.$seccion", compact('articulos', 'talles', 'categorias', 'usuarios', 'mensajes', 'noticias'));
+        }
+    
+
         return view("admin.secciones.$seccion", compact('articulos', 'talles', 'categorias', 'usuarios', 'mensajes'));
     }
 }

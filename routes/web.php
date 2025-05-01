@@ -89,7 +89,7 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('auth.logout');
 //ruta para las noticias
 Route::middleware(['auth'])->group(function () {
     Route::middleware('admin')->group(function () {
-        Route::resource('admin/noticias', NoticiaController::class);
+        Route::resource('admin/noticias', NoticiaController::class)->names('admin.noticias');
     });
 });
 
