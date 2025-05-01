@@ -26,6 +26,7 @@ class DatabaseSeeder extends Seeder
             CategoriasSeeder::class,
             ArticulosSeeder::class,
             AlumnoSeeder::class,
+            NoticiaSeeder::class
         ]);
     }
 }
