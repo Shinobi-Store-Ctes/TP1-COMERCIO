@@ -7,7 +7,7 @@
 @section('content')
 <div class="container mt-4">
     <h2>Editar Noticia</h2>
-    <form action="{{ route('noticias.update', $noticia->id) }}" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('admin.noticias.update', $noticia->id) }}" method="POST" enctype="multipart/form-data">
         @csrf
         @method('PUT')
 
@@ -32,7 +32,7 @@
         </div>
 
         <button type="submit" class="btn btn-warning">Actualizar</button>
-        <a href="{{ route('noticias.index') }}" class="btn btn-secondary">Cancelar</a>
+        <a href="{{ route('admin.noticias.index') }}" class="btn btn-secondary">Cancelar</a>
     </form>
 </div>
 @endsection

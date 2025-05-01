@@ -31,7 +31,7 @@
                     <td>{{ $noticia->titulo }}</td>
                     <td>
                         @if ($noticia->imagen)
-                        <img src="{{ asset('images/' . $noticia->foto) }}" alt="Imagen de noticia" width="100">
+                            <img src="{{ asset('images/' . $noticia->imagen) }}" alt="Imagen de noticia" width="100">
                         @else
                             <em>Sin imagen</em>
                         @endif

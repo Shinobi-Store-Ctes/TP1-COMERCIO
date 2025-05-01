@@ -295,7 +295,7 @@
                 <div class="col">
                     <div class="card h-100">
                         @if ($noticia->foto)
-                            <img src="{{ asset('images/' . $noticia->foto) }}" class="card-img-top" alt="{{ $noticia->titulo }}">
+                            <img src="{{ asset('images/' . $noticia->imagen) }}" class="card-img-top" alt="{{ $noticia->titulo }}">
                         @endif
                         <div class="card-body">
                             <h5 class="card-title">{{ $noticia->titulo }}</h5>

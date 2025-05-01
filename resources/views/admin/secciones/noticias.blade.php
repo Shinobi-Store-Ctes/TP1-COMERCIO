@@ -5,7 +5,7 @@
     <h3 class="mt-4">Listado de Noticias</h3>
 
     <div class="modal-footer d-flex justify-content-center mt-4">
-        <a href="{{ route('noticias.create') }}" class="btn btn-success mb-3">Agregar Noticia</a>
+        <a href="{{ route('admin.noticias.create') }}" class="btn btn-success mb-3">Agregar Noticia</a>
     </div>
 
     <div class="table-responsive">
@@ -27,15 +27,15 @@
                         <td>{{ Str::limit($noticia->contenido, 100) }}</td>
                         <td>
                             @if ($noticia->foto)
-                                <img src="{{ asset('images/' . $noticia->foto) }}" alt="Imagen" width="100">
+                                <img src="{{ asset('images/' . $noticia->imagen) }}" alt="Imagen" width="100">
                             @else
                                 Sin imagen
                             @endif
                         </td>
                         <td class="d-flex justify-content-center gap-2">
-                            <a href="{{ route('noticias.edit', $noticia) }}" class="btn btn-warning">Editar</a>
+                            <a href="{{ route('admin.noticias.edit', $noticia) }}" class="btn btn-warning">Editar</a>
 
-                            <form action="{{ route('noticias.destroy', $noticia) }}" method="POST" onsubmit="return confirm('¿Estás seguro que querés eliminar esta noticia?');">
+                            <form action="{{ route('admin.noticias.destroy', $noticia) }}" method="POST" onsubmit="return confirm('¿Estás seguro que querés eliminar esta noticia?');">
                                 @csrf
                                 @method('DELETE')
                                 <button class="btn btn-danger">Eliminar</button>

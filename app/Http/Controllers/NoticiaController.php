@@ -6,7 +6,6 @@ use App\Models\Noticia;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 
-
 class NoticiaController extends Controller
 {
     public function index()
@@ -38,7 +37,7 @@ class NoticiaController extends Controller
         Noticia::create([
             'titulo' => $request->titulo,
             'contenido' => $request->contenido,
-            'foto' => $nombreImagen ? 'noticias/' . $nombreImagen : null,
+            'imagen' => $nombreImagen ? 'noticias/' . $nombreImagen : null,
         ]);
 
         return redirect()->route('admin.noticias.index')->with('success', 'Noticia creada correctamente.');
@@ -59,13 +58,13 @@ class NoticiaController extends Controller
 
         if ($request->hasFile('imagen')) {
             // Borrar imagen anterior si existe
-            if ($noticia->foto && File::exists(public_path('images/' . $noticia->foto))) {
-                File::delete(public_path('images/' . $noticia->foto));
+            if ($noticia->imagen && File::exists(public_path('images/' . $noticia->imagen))) {
+                File::delete(public_path('images/' . $noticia->imagen));
             }
 
             $nombreImagen = time() . '_' . $request->file('imagen')->getClientOriginalName();
             $request->file('imagen')->move(public_path('images/noticias'), $nombreImagen);
-            $noticia->foto = 'noticias/' . $nombreImagen;
+            $noticia->imagen = 'noticias/' . $nombreImagen;
         }
 
         $noticia->titulo = $request->titulo;
@@ -77,8 +76,8 @@ class NoticiaController extends Controller
 
     public function destroy(Noticia $noticia)
     {
-        if ($noticia->foto && File::exists(public_path('images/' . $noticia->foto))) {
-            File::delete(public_path('images/' . $noticia->foto));
+        if ($noticia->imagen && File::exists(public_path('images/' . $noticia->imagen))) {
+            File::delete(public_path('images/' . $noticia->imagen));
         }
 
         $noticia->delete();
@@ -87,8 +86,8 @@ class NoticiaController extends Controller
     }
 
     public function publicas()
-{
-    $noticias = Noticia::latest()->take(3)->get(); // o ->paginate() si querés paginación
-    return view('home', compact('noticias'));
-}
+    {
+        $noticias = Noticia::latest()->take(3)->get();
+        return view('home', compact('noticias'));
+    }
 }
